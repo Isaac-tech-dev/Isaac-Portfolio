@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+//import Resume from "../assets/Isaac Resume.pdf"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -114,7 +115,7 @@ const Navbar = () => {
           >
             <a
               className={`flex justify-between items-center w-full text-gray-300`}
-              href=""
+              href="mailto:ayeniisaac1on1@gmail.com"
             >
               Email <HiOutlineMail size={30} />
             </a>
@@ -124,7 +125,8 @@ const Navbar = () => {
           >
             <a
               className={`flex justify-between items-center w-full text-gray-300`}
-              href=""
+              href="https://drive.google.com/file/d/18Nvqyj9YqpZ-uWnB6kOuD0sCnJnz25l3/view?usp=drive_link"
+              target="_blank"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
