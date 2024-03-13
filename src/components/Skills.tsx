@@ -1,4 +1,4 @@
-import React from "react";
+//import React from "react";
 import Html from "../assets/html.png";
 import Css from "../assets/css.png";
 import TypeScript from "../assets/typeScript.png";
@@ -8,7 +8,7 @@ import Tailwind from "../assets/tailwindcss.png";
 
 const Skills = () => {
   return (
-    <div name="skills" className={`bg-[#0a192f] h-screen w-full text-gray-300`}>
+    <div id="skills" className={`bg-[#0a192f] h-screen w-full text-gray-300`}>
       {/* Container */}
       <div
         className={`max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full`}

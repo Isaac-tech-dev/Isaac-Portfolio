@@ -1,22 +1,17 @@
 //import React from "react";
 
-
 import Project2 from "../assets/pro2.png";
 import Project4 from "../assets/pro4.png";
 import Project5 from "../assets/pro5.png";
 import Travel from "../assets/travelapp.png";
 
-
 import Mobile3 from "../assets/travelappp.png";
 import Mobile4 from "../assets/fitnessapp.png";
-import Mobile5 from "../assets/weatherapp.png"
+import Mobile5 from "../assets/weatherapp.png";
 
 const Work = () => {
   return (
-    <div
-      name="work"
-      className={`bg-[#0a192f] w-full md:h-screen text-gray-300`}
-    >
+    <div id="work" className={`bg-[#0a192f] w-full md:h-screen text-gray-300`}>
       {/* Container */}
       <div
         className={`max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full`}
@@ -32,7 +27,7 @@ const Work = () => {
         <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-4`}>
           {/* Card Item Div */}
           {/* Web Project 1 */}
-         
+
           {/* Web Project 2 */}
           <div
             style={{ backgroundImage: `url(${Project2})` }}
@@ -156,9 +151,9 @@ const Work = () => {
           </div>
 
           {/* Mobile Project 1 */}
-          
+
           {/* Mobile Project 2 */}
-          
+
           {/* Mobile Project 3 */}
           <div
             style={{ backgroundImage: `url(${Mobile3})` }}

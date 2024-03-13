@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 @layer base {
   body {
@@ -27,4 +29,8 @@
     rgba(112, 157, 255, 0.8),
     hsla(242, 74%, 61%, 0.8)
   )!important;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
