@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+import PI from "../assets/pi.png";
 //import Resume from "../assets/Isaac Resume.pdf"
 
 const Navbar = () => {
@@ -15,7 +16,11 @@ const Navbar = () => {
       className={`fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300`}
     >
       {/* Initials */}
-      <div className={`text-pink-600`}>IA</div>
+      <div>
+        <a href="/">
+          <img src={PI} alt="logo" className={`w-[20%]`} />
+        </a>
+      </div>
 
       {/* Menu */}
       <ul className={`hidden md:flex`}>

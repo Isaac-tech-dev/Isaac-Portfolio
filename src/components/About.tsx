@@ -23,10 +23,11 @@ const About = () => {
           </div>
           <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-              ducimus tempora excepturi incidunt eligendi architecto optio nam
-              laboriosam ipsam fugiat harum repellendus inventore officia,
-              commodi nemo corporis consequatur et veniam.
+              Proficient in HTML, CSS, JavaScript, TypeScript, React Js, Angular
+              Js, React Native and Next Js. UI/UX design aficionado. My passion
+              for software engineering fuels a relentless pursuit of knowledge
+              and skills. I'm always hungry for new technologies and fresh
+              opportunities that can fuel my career growth.
             </p>
           </div>
         </div>

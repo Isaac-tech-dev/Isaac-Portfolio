@@ -1,5 +1,6 @@
 //import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -16,22 +17,30 @@ const Hero = () => {
           I'm a Front End Developer
         </h2>
         <p className={`text-[#8892b0] py-4 max-w-[700px]`}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
-          praesentium officia cumque et, animi porro minima harum, consequuntur
-          tenetur delectus nihil architecto provident natus eligendi corporis
-          dolore adipisci veniam est.
+          🚀 Software Engineer | Web & Mobile Development Expert | Open to New
+          Opportunities As a seasoned software engineer, I blend professional
+          prowess with a penchant for cutting-edge technology. My domain of
+          expertise? Crafting responsive and real-time websites and mobile apps
+          that stand out. My toolkit includes HTML, CSS, JavaScript, TypeScript,
+          Tailwind css, React Js, React Native, Angular Js and Next Js, ensuring
+          efficient, high-performance code. I'm always hungry for new
+          technologies and fresh opportunities that can fuel my career growth.
+          🌐 Let's connect and explore innovative projects or discuss exciting
+          career prospects!
         </p>
 
         {/* Button */}
         <div>
-          <button
-            className={`text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600`}
-          >
-            View Work
-            <span className={`group-hover:rotate-90 duration-300`}>
-              <HiArrowNarrowRight className={`ml-3`} />
-            </span>
-          </button>
+          <Link to="work" smooth={true} duration={500}>
+            <button
+              className={`text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600`}
+            >
+              View Work
+              <span className={`group-hover:rotate-90 duration-300`}>
+                <HiArrowNarrowRight className={`ml-3`} />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
