@@ -20,7 +20,7 @@ const Work = () => {
           <p className={`text-4xl font-bold inline border-b-4 border-pink-600`}>
             Work
           </p>
-          <p className="py-6">Check out some of my recent work</p>
+          <p className="py-6">// Check out some of my recent work</p>
         </div>
 
         {/* Project Container*/}
@@ -31,7 +31,7 @@ const Work = () => {
           {/* Web Project 2 */}
           <div
             style={{ backgroundImage: `url(${Project2})` }}
-            className={`shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div`}
+            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
@@ -62,7 +62,7 @@ const Work = () => {
           {/* Web Project 3 */}
           <div
             style={{ backgroundImage: `url(${Project4})` }}
-            className={`shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div`}
+            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
@@ -93,7 +93,7 @@ const Work = () => {
           {/* Web Project 4 */}
           <div
             style={{ backgroundImage: `url(${Project5})` }}
-            className={`shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div`}
+            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
@@ -121,7 +121,7 @@ const Work = () => {
           {/* Web Project 5 */}
           <div
             style={{ backgroundImage: `url(${Travel})` }}
-            className={`shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div`}
+            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
@@ -157,7 +157,7 @@ const Work = () => {
           {/* Mobile Project 3 */}
           <div
             style={{ backgroundImage: `url(${Mobile3})` }}
-            className={`shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div`}
+            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
@@ -188,7 +188,7 @@ const Work = () => {
           {/* Mobile Project 4 */}
           <div
             style={{ backgroundImage: `url(${Mobile4})` }}
-            className={`shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div`}
+            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
@@ -219,7 +219,7 @@ const Work = () => {
           {/* Mobile Project 5 */}
           <div
             style={{ backgroundImage: `url(${Mobile5})` }}
-            className={`shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div`}
+            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
