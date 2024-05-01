@@ -4,6 +4,7 @@ import Project2 from "../assets/pro2.png";
 import Project4 from "../assets/pro4.png";
 import Project5 from "../assets/pro5.png";
 import Travel from "../assets/travelapp.png";
+import Ecormmece from "../assets/pro6.png";
 
 import Mobile3 from "../assets/travelappp.png";
 import Mobile4 from "../assets/fitnessapp.png";
@@ -27,6 +28,36 @@ const Work = () => {
         <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-4`}>
           {/* Card Item Div */}
           {/* Web Project 1 */}
+          <div
+            style={{ backgroundImage: `url(${Ecormmece})` }}
+            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+          >
+            {/* Hover Effect Div */}
+            <div className={`opacity-0 group-hover:opacity-100`}>
+              <span className={`text-2xl font-bold text-white tracking-wider`}>
+                Ecormerce site built with React, React Router Dom, Swipper Js, Tailwind CSS
+              </span>
+              <div className={`pt-8 text-center`}>
+                <a
+                  href="https://coral-ecormmerce.vercel.app/"
+                  target="_blank"
+                >
+                  <button
+                    className={`text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg cursor-pointer`}
+                  >
+                    Demo
+                  </button>
+                </a>
+                <a href="/">
+                  <button
+                    className={`text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg cursor-pointer`}
+                  >
+                    Code
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
 
           {/* Web Project 2 */}
           <div
