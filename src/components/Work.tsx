@@ -6,6 +6,9 @@ import Project5 from "../assets/pro5.png";
 import Travel from "../assets/travelapp.png";
 import Ecormmece from "../assets/pro6.png";
 
+import Lite from "../assets/lite.png";
+import Avanzar from "../assets/avanzar.png";
+
 import Mobile3 from "../assets/travelappp.png";
 import Mobile4 from "../assets/fitnessapp.png";
 import Mobile5 from "../assets/weatherapp.png";
@@ -27,14 +30,64 @@ const Work = () => {
         {/* Project Container*/}
         <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-4`}>
           {/* Card Item Div */}
-          {/* Web Project 1 */}
+          {/* Optimus 1 */}
           <div
-            style={{ backgroundImage: `url(${Ecormmece})` }}
-            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+            style={{ backgroundImage: `url(${Lite})` }}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
-              <span className={`text-2xl font-bold text-white tracking-wider`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
+                Account Opening Portal built with React JS, TypeScript, TailwindCSS and Redux Toolkit.
+              </span>
+              <div className={`pt-8 text-center`}>
+                <a
+                  href="https://lite.optimusbank.com:334/auth"
+                  target="_blank"
+                >
+                  <button
+                    className={`text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg cursor-pointer`}
+                  >
+                    Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Optimus 2 */}
+          <div
+            style={{ backgroundImage: `url(${Avanzar})` }}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+          >
+            {/* Hover Effect Div */}
+            <div className={`opacity-0 group-hover:opacity-100`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
+              Account Opening Portal for Agent built with React JS, TypeScript, TailwindCSS and Redux Toolkit.
+              </span>
+              <div className={`pt-8 text-center`}>
+                <a
+                  href="https://avanzar.optimusbank.com:5174/"
+                  target="_blank"
+                >
+                  <button
+                    className={`text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg cursor-pointer`}
+                  >
+                    Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Web Project 1 */}
+          <div
+            style={{ backgroundImage: `url(${Ecormmece})` }}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+          >
+            {/* Hover Effect Div */}
+            <div className={`opacity-0 group-hover:opacity-100`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
                 Ecormerce site built with React, React Router Dom, Swipper Js, Tailwind CSS
               </span>
               <div className={`pt-8 text-center`}>
@@ -62,11 +115,11 @@ const Work = () => {
           {/* Web Project 2 */}
           <div
             style={{ backgroundImage: `url(${Project2})` }}
-            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
-              <span className={`text-2xl font-bold text-white tracking-wider`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
                 Ecormerce site built with Html, css and Vanilla Js
               </span>
               <div className={`pt-8 text-center`}>
@@ -93,11 +146,11 @@ const Work = () => {
           {/* Web Project 3 */}
           <div
             style={{ backgroundImage: `url(${Project4})` }}
-            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
-              <span className={`text-2xl font-bold text-white tracking-wider`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
                 Resturant Landing Page built with Html, Css
               </span>
               <div className={`pt-8 text-center`}>
@@ -124,11 +177,11 @@ const Work = () => {
           {/* Web Project 4 */}
           <div
             style={{ backgroundImage: `url(${Project5})` }}
-            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
-              <span className={`text-2xl font-bold text-white tracking-wider`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
                 Travel site built with React Js
               </span>
               <div className={`pt-8 text-center`}>
@@ -152,11 +205,11 @@ const Work = () => {
           {/* Web Project 5 */}
           <div
             style={{ backgroundImage: `url(${Travel})` }}
-            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
-              <span className={`text-2xl font-bold text-white tracking-wider`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
                 Travel site built with Next Js and Tailwind Css
               </span>
               <div className={`pt-8 text-center`}>
@@ -188,11 +241,11 @@ const Work = () => {
           {/* Mobile Project 3 */}
           <div
             style={{ backgroundImage: `url(${Mobile3})` }}
-            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
-              <span className={`text-2xl font-bold text-white tracking-wider`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
                 Travel App built with React Native
               </span>
               <div className={`pt-8 text-center`}>
@@ -219,11 +272,11 @@ const Work = () => {
           {/* Mobile Project 4 */}
           <div
             style={{ backgroundImage: `url(${Mobile4})` }}
-            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
-              <span className={`text-2xl font-bold text-white tracking-wider`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
                 Fitness App built with React Native
               </span>
               <div className={`pt-8 text-center`}>
@@ -250,11 +303,11 @@ const Work = () => {
           {/* Mobile Project 5 */}
           <div
             style={{ backgroundImage: `url(${Mobile5})` }}
-            className={`shadow-lg shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
+            className={`shadow-sm shadow-[#616d91] group container rounded-md flex justify-center items-center mx-auto content-div px-4 text-center`}
           >
             {/* Hover Effect Div */}
             <div className={`opacity-0 group-hover:opacity-100`}>
-              <span className={`text-2xl font-bold text-white tracking-wider`}>
+              <span className={`text-[16px] font-bold text-white tracking-wider`}>
                 Weather App built with React Native
               </span>
               <div className={`pt-8 text-center`}>
