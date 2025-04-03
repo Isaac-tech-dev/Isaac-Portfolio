@@ -1,8 +1,11 @@
 //import React from "react";
 import Html from "../assets/html.png";
 import Css from "../assets/css.png";
+import NodeJs from "../assets/node.png";
 import TypeScript from "../assets/typeScript.png";
 import ReactJs from "../assets/react.png";
+import Expo from "../assets/expo.png";
+import NextJs from "../assets/next.png";
 import Angular from "../assets/angular.png";
 import Tailwind from "../assets/tailwindcss.png";
 
@@ -45,6 +48,13 @@ const Skills = () => {
             <img className={`w-20 mx-auto`} src={TypeScript} alt="Html Icon" />
             <p className={`my-4`}>TYPESCRIPT</p>
           </div>
+          {/* Node */}
+          <div
+            className={`shadow-sm shadow-[#040c16] hover:scale-110 duration-500`}
+          >
+            <img className={`w-20 mx-auto`} src={NodeJs} alt="Html Icon" />
+            <p className={`my-4`}>NODE JS</p>
+          </div>
           {/* React JS */}
           <div
             className={`shadow-sm shadow-[#040c16] hover:scale-110 duration-500`}
@@ -52,12 +62,26 @@ const Skills = () => {
             <img className={`w-20 mx-auto`} src={ReactJs} alt="Html Icon" />
             <p className={`my-4`}>REACT JS</p>
           </div>
+          {/* Next JS */}
+          <div
+            className={`shadow-sm shadow-[#040c16] hover:scale-110 duration-500`}
+          >
+            <img className={`w-20 mx-auto`} src={NextJs} alt="Html Icon" />
+            <p className={`my-4`}>NEXT JS</p>
+          </div>
           {/* React Native */}
           <div
             className={`shadow-sm shadow-[#040c16] hover:scale-110 duration-500`}
           >
             <img className={`w-20 mx-auto`} src={ReactJs} alt="Html Icon" />
             <p className={`my-4`}>REACT NATIVE</p>
+          </div>
+          {/* Expo */}
+          <div
+            className={`shadow-sm shadow-[#040c16] hover:scale-110 duration-500`}
+          >
+            <img className={`w-20 mx-auto`} src={Expo} alt="Html Icon" />
+            <p className={`my-4`}>EXPO</p>
           </div>
           {/* Angular */}
           <div

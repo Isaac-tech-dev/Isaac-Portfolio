@@ -23,11 +23,22 @@ const About = () => {
           </div>
           <div>
             <p>
-              Proficient in HTML, CSS, JavaScript, TypeScript, React Js, Angular
-              Js, React Native and Next Js. UI/UX design aficionado. My passion
-              for software engineering fuels a relentless pursuit of knowledge
-              and skills. I'm always hungry for new technologies and fresh
-              opportunities that can fuel my career growth.
+              I am a highly skilled software engineer with expertise in HTML,
+              CSS, JavaScript, TypeScript, React.js, Angular.js, React Native,
+              and Next.js. With a strong foundation in both web and mobile
+              development, I create seamless, high-performance applications that
+              deliver exceptional user experiences. My UI/UX design acumen
+              ensures that every product I build is not only functional but also
+              intuitive and visually appealing. My passion for software
+              engineering fuels a relentless pursuit of knowledge and
+              innovation, keeping me at the forefront of emerging technologies.
+              From building scalable web applications with React.js and Next.js
+              to crafting efficient and dynamic mobile experiences with React
+              Native, I thrive on solving complex problems and bringing ideas to
+              life. I am always eager to embrace new challenges, explore
+              cutting-edge technologies, and collaborate on impactful projects
+              that push the boundaries of digital experiences. Let’s build the
+              future—one line of code at a time!
             </p>
           </div>
         </div>
