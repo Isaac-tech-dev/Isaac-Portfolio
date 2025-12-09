@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div>
+    <div className={`gap-[20px]`}>
       <Navbar />
       <Hero />
       <About />
