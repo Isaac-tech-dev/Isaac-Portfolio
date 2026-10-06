@@ -1,6 +1,6 @@
 export const profile = {
   name: "Isaac Ayeni",
-  role: "Mobile & frontend engineer",
+  role: "Software Engineer",
   location: "Lagos, Nigeria",
   email: "ayeniisaac1on1@gmail.com",
   github: "https://github.com/Isaac-tech-dev",
@@ -95,23 +95,23 @@ export const featured: FeaturedProject[] = [
     },
     links: [],
   },
-  {
-    slug: "ttc",
-    title: "The Triumphant Community",
-    client: "TTC Global",
-    year: "2024",
-    summary:
-      "The church's public website, with service times, locations and the latest sermons.",
-    contributions: ["Designed and built the site"],
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    image: {
-      src: "/work/ttc-website.webp",
-      width: 1600,
-      height: 888,
-      alt: "The Triumphant Community website home page",
-    },
-    links: [{ label: "Visit site", href: "https://www.ttcglobal.org" }],
-  },
+  // {
+  //   slug: "ttc",
+  //   title: "The Triumphant Community",
+  //   client: "TTC Global",
+  //   year: "2024",
+  //   summary:
+  //     "The church's public website, with service times, locations and the latest sermons.",
+  //   contributions: ["Designed and built the site"],
+  //   stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+  //   image: {
+  //     src: "/work/ttc-website.webp",
+  //     width: 1600,
+  //     height: 888,
+  //     alt: "The Triumphant Community website home page",
+  //   },
+  //   links: [{ label: "Visit site", href: "https://www.ttcglobal.org" }],
+  // },
 ];
 
 export type OtherProject = {
@@ -204,7 +204,7 @@ export type Job = {
 
 export const experience: Job[] = [
   {
-    dates: "2023 – now",
+    dates: "March 2023 – now",
     role: "Lead Mobile Developer",
     company: "Optimus Bank",
     place: "Lagos",
@@ -215,7 +215,7 @@ export const experience: Job[] = [
     ],
   },
   {
-    dates: "2025",
+    dates: "May 2025 - July 2025",
     role: "Mobile Developer (contract)",
     company: "MapIs4U",
     place: "Canada",
@@ -225,7 +225,7 @@ export const experience: Job[] = [
     ],
   },
   {
-    dates: "2024 – 2025",
+    dates: "December 2024 – July 2025",
     role: "Mobile Developer (contract)",
     company: "Kubby Space",
     place: "US",
@@ -235,7 +235,7 @@ export const experience: Job[] = [
     ],
   },
   {
-    dates: "2024 – 2025",
+    dates: "July 2024 – May 2025",
     role: "Mobile Developer (contract)",
     company: "Oriz Life",
     place: "US",
@@ -245,7 +245,7 @@ export const experience: Job[] = [
     ],
   },
   {
-    dates: "2022 – 2023",
+    dates: "March 2022 – January 2023",
     role: "Junior Full-stack Engineer",
     company: "The Spotter Company",
     place: "Nigeria",
