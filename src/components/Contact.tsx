@@ -1,20 +1,63 @@
-//import React from 'react'
+import { profile } from "@/data/site";
 
-const Contact = () => {
+const field =
+  "mt-2 w-full rounded-lg border border-rule bg-paper px-4 py-3 text-ink placeholder:text-muted/70 transition-colors focus:border-ink focus:outline-none";
+
+export default function Contact() {
   return (
-    <div id="contact" className={`bg-[#0a192f] w-full h-screen text-gray-300 flex justify-center items-center p-8`}>
-        <form action="https://getform.io/f/zazokymb" method="POST"  className={`flex flex-col max-w-[600px] w-full`}>
-            <div className={`pb-8`}>
-                <p className={`text-4xl font-bold inline border-b-4 border-pink-600`}>Contact</p>
-                <p className={`py-4`}>// Submit the form below or reach out to me on <a href="mailto:ayeniisaac1on1@gmail.com">ayeniisaac1on1@gmail.com</a></p>
-            </div>
-            <input className={`p-2 bg-[#ccd6f6] text-black`} type="text" placeholder='Name' name='name' />
-            <input className={`my-4 p-2 bg-[#ccd6f6] text-black`} type="email" placeholder='Email' name='email' />
-            <textarea name="message" rows={10} className={`bg-[#ccd6f6] p-2 text-black`} placeholder='Message'></textarea>
-            <button className={`text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center`}>Let's Connect</button>
-        </form>
-    </div>
-  )
-}
+    <section id="contact" className="border-t border-rule bg-surface/60">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 sm:py-28 md:grid-cols-2 md:gap-16">
+        <div>
+          <h2 className="font-display text-4xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-5xl">
+            Hiring for a mobile or frontend role?
+          </h2>
+          <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
+            Tell me about the team and the product. I usually reply within a day.
+          </p>
+          <a
+            href={`mailto:${profile.email}`}
+            className="text-link mt-8 inline-block break-all font-display text-xl font-medium sm:text-2xl"
+          >
+            {profile.email}
+          </a>
+        </div>
 
-export default Contact
+        <form action={profile.formAction} method="POST" className="space-y-5">
+          <div>
+            <label htmlFor="name" className="text-sm font-medium">
+              Name
+            </label>
+            <input id="name" name="name" type="text" required autoComplete="name" className={field} />
+          </div>
+          <div>
+            <label htmlFor="email" className="text-sm font-medium">
+              Email
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autoComplete="email"
+              className={field}
+            />
+          </div>
+          <div>
+            <label htmlFor="message" className="text-sm font-medium">
+              Message
+            </label>
+            <textarea id="message" name="message" rows={6} required className={field} />
+          </div>
+          {/* Honeypot field for Getform spam filtering */}
+          <input type="hidden" name="_gotcha" />
+          <button
+            type="submit"
+            className="rounded-full bg-ink px-7 py-3 font-medium text-paper transition-transform hover:-translate-y-0.5"
+          >
+            Send message
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+}

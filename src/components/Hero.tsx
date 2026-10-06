@@ -1,50 +1,62 @@
-//import React from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import { Link } from "react-scroll";
+import { profile } from "@/data/site";
 
-const Hero = () => {
+const lines = ["I build the mobile apps", "people use to bank, train", "and talk to their doctor."];
+
+export default function Hero() {
   return (
-    <div id="hero" className={`bg-[#0a192f] w-full h-screen`}>
-      {/* Container */}
-      <div
-        className={`max-w-[1000px] mx-auto p-8 flex flex-col justify-center h-full`}
+    <section id="top" className="mx-auto max-w-6xl px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24">
+      <h1
+        className="font-display text-[clamp(2.6rem,7.6vw,6.75rem)] font-semibold leading-[0.95] tracking-[-0.025em]"
+        style={{ fontVariationSettings: '"wdth" 90' }}
       >
-        <p className={`text-pink-600`}>Hi, my name is</p>
-        <h1 className={`text-4xl sm:text-7xl font-bold text-[#ccd6f6]`}>
-          Isaac Ayeni
-        </h1>
-        <h2 className={`text-4xl sm:text-7xl font-bold text-[#8892b0]`}>
-          I'm a Software Engineer
-        </h2>
-        <p className={`text-[#8892b0] py-4 max-w-[700px]`}>
-          🚀 Software Engineer | Web & Mobile Development Expert | Open to New
-          Opportunities As a seasoned software engineer, I blend professional
-          prowess with a penchant for cutting-edge technology. My domain of
-          expertise? Crafting responsive and real-time websites and mobile apps
-          that stand out. My toolkit includes HTML, CSS, JavaScript, TypeScript,
-          Tailwind css, React Js, React Native, Angular Js and Next Js, ensuring
-          efficient, high-performance code. I'm always hungry for new
-          technologies and fresh opportunities that can fuel my career growth.
-          🌐 Let's connect and explore innovative projects or discuss exciting
-          career prospects!
+        {lines.map((line, i) => (
+          <span key={line} className="rise md:block" style={{ animationDelay: `${i * 110}ms` }}>
+            {line}{" "}
+          </span>
+        ))}
+      </h1>
+
+      <div
+        className="rise mt-10 grid gap-8 sm:mt-14 md:grid-cols-[minmax(0,34rem)_1fr] md:items-end"
+        style={{ animationDelay: "420ms" }}
+      >
+        <p className="text-lg leading-relaxed text-muted sm:text-xl">
+          I&apos;m {profile.name}, lead mobile developer at Optimus Bank in Lagos. For four
+          years I&apos;ve shipped React Native and React apps for banks, health startups
+          and fitness brands.
         </p>
 
-        {/* Button */}
-        <div>
-          <Link to="work" smooth={true} duration={500}>
-            <button
-              className={`text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600`}
+        <div className="flex flex-col gap-5 md:items-end">
+          <p className="flex items-center gap-2 text-sm text-muted">
+            <span aria-hidden="true" className="size-2 rounded-full bg-accent" />
+            {profile.available}
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={`mailto:${profile.email}`}
+              className="rounded-full bg-accent px-5 py-2.5 sm:px-6 sm:py-3 font-medium text-on-accent transition-transform hover:-translate-y-0.5"
             >
-              View Work
-              <span className={`group-hover:rotate-90 duration-300`}>
-                <HiArrowNarrowRight className={`ml-3`} />
-              </span>
-            </button>
-          </Link>
+              Email me
+            </a>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-rule px-5 py-2.5 sm:px-6 sm:py-3 font-medium transition-colors hover:border-ink"
+            >
+              LinkedIn
+            </a>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-rule px-5 py-2.5 sm:px-6 sm:py-3 font-medium transition-colors hover:border-ink"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Hero;
+}
