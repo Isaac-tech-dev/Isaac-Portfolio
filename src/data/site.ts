@@ -7,7 +7,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/isaac-ayeni/",
   resume:
     "https://drive.google.com/file/d/1BfSKwk7WosCOZrwegRboHSkitdgtvS7e/view?usp=drivesdk",
-  available: "Open to remote mobile and frontend roles",
+  available: "Open to remote mobile developer roles",
   formAction: "https://getform.io/f/zazokymb",
 };
 
