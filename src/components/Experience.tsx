@@ -4,14 +4,16 @@ export default function Experience() {
   return (
     <section id="experience" className="border-t border-rule">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-        <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 data-reveal className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
           Experience
         </h2>
 
         <ol className="mt-10 border-t border-rule sm:mt-12">
-          {experience.map((job) => (
+          {experience.map((job, i) => (
             <li
               key={`${job.company}-${job.dates}`}
+              data-reveal
+              style={{ "--d": `${i * 60}ms` } as React.CSSProperties}
               className="grid gap-2 border-b border-rule py-7 md:grid-cols-12 md:gap-6"
             >
               <p className="text-sm text-muted tabular-nums md:col-span-3 md:pt-1">{job.dates}</p>
@@ -31,7 +33,7 @@ export default function Experience() {
               </div>
             </li>
           ))}
-          <li className="grid gap-2 border-b border-rule py-7 md:grid-cols-12 md:gap-6">
+          <li data-reveal className="grid gap-2 border-b border-rule py-7 md:grid-cols-12 md:gap-6">
             <p className="text-sm text-muted tabular-nums md:col-span-3 md:pt-1">
               {education.year}
             </p>
@@ -42,10 +44,10 @@ export default function Experience() {
           </li>
         </ol>
 
-        <h3 className="mt-20 font-display text-2xl font-semibold tracking-tight">Skills</h3>
+        <h3 data-reveal className="mt-20 font-display text-2xl font-semibold tracking-tight">Skills</h3>
         <dl className="mt-6 grid gap-x-12 gap-y-6 sm:grid-cols-2">
-          {skills.map((s) => (
-            <div key={s.group}>
+          {skills.map((s, i) => (
+            <div key={s.group} data-reveal style={{ "--d": `${i * 60}ms` } as React.CSSProperties}>
               <dt className="font-medium">{s.group}</dt>
               <dd className="mt-1 leading-relaxed text-muted">{s.items}</dd>
             </div>

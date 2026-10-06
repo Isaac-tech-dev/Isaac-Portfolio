@@ -28,7 +28,10 @@ export default function Hero() {
 
         <div className="flex flex-col gap-5 md:items-end">
           <p className="flex items-center gap-2 text-sm text-muted">
-            <span aria-hidden="true" className="size-2 rounded-full bg-accent" />
+            <span aria-hidden="true" className="relative flex size-2">
+              <span className="pulse absolute inset-0 rounded-full bg-accent" />
+              <span className="relative size-2 rounded-full bg-accent" />
+            </span>
             {profile.available}
           </p>
           <div className="flex flex-wrap gap-3">

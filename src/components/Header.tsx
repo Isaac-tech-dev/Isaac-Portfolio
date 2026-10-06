@@ -35,6 +35,7 @@ export default function Header() {
           <ThemeToggle />
         </nav>
       </div>
+      <div aria-hidden="true" className="scroll-progress" />
     </header>
   );
 }

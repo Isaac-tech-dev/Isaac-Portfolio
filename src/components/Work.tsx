@@ -20,7 +20,7 @@ export default function Work() {
   return (
     <section id="work" className="border-t border-rule">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-        <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 data-reveal className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
           Selected work
         </h2>
 
@@ -28,27 +28,34 @@ export default function Work() {
           {featured.map((project, i) => (
             <article
               key={project.slug}
-              className="grid gap-8 md:grid-cols-12 md:items-center md:gap-12"
+              className="group grid gap-8 md:grid-cols-12 md:items-center md:gap-12"
             >
               <div
+                data-reveal="media"
                 className={`overflow-hidden rounded-2xl bg-surface md:col-span-7 ${
                   i % 2 === 1 ? "md:order-2" : ""
                 }`}
               >
+                <div className="media-zoom">
                 <Image
                   src={project.image.src}
                   width={project.image.width}
                   height={project.image.height}
                   alt={project.image.alt}
                   sizes="(min-width: 768px) 640px, 100vw"
-                  className="h-auto w-full p-5 sm:p-8 lg:p-10"
+                  className="h-auto w-full p-5 transition-transform duration-500 ease-out group-hover:-translate-y-1.5 group-hover:scale-[1.015] sm:p-8 lg:p-10"
                   priority={i === 0}
                 />
+                </div>
               </div>
 
-              <div className={`md:col-span-5 ${i % 2 === 1 ? "md:order-1" : ""}`}>
+              <div
+                data-reveal
+                style={{ "--d": "150ms" } as React.CSSProperties}
+                className={`md:col-span-5 ${i % 2 === 1 ? "md:order-1" : ""}`}
+              >
                 <p className="text-sm text-muted">
-                  {project.client}, {project.year}
+                  {project.year ? `${project.client}, ${project.year}` : project.client}
                 </p>
                 <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
                   {project.title}
@@ -69,13 +76,15 @@ export default function Work() {
           ))}
         </div>
 
-        <h3 className="mt-24 font-display text-2xl font-semibold tracking-tight sm:mt-32">
+        <h3 data-reveal className="mt-24 font-display text-2xl font-semibold tracking-tight sm:mt-32">
           More projects
         </h3>
         <ul className="mt-6 border-t border-rule">
-          {otherProjects.map((p) => (
+          {otherProjects.map((p, i) => (
             <li
               key={p.title}
+              data-reveal
+              style={{ "--d": `${i * 50}ms` } as React.CSSProperties}
               className="grid gap-1 border-b border-rule py-5 md:grid-cols-12 md:gap-6"
             >
               <p className="font-medium md:col-span-3">{p.title}</p>

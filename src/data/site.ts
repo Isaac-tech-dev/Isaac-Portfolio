@@ -6,7 +6,7 @@ export const profile = {
   github: "https://github.com/Isaac-tech-dev",
   linkedin: "https://www.linkedin.com/in/isaac-ayeni/",
   resume:
-    "https://drive.google.com/file/d/18Nvqyj9YqpZ-uWnB6kOuD0sCnJnz25l3/view?usp=drive_link",
+    "https://drive.google.com/file/d/1BfSKwk7WosCOZrwegRboHSkitdgtvS7e/view?usp=drivesdk",
   available: "Open to remote mobile and frontend roles",
   formAction: "https://getform.io/f/zazokymb",
 };
@@ -17,7 +17,7 @@ export type FeaturedProject = {
   slug: string;
   title: string;
   client: string;
-  year: string;
+  year?: string;
   summary: string;
   contributions: string[];
   stack: string[];
@@ -94,6 +94,24 @@ export const featured: FeaturedProject[] = [
       alt: "Oriz Life get-started screen on Android and iOS",
     },
     links: [],
+  },
+  {
+    slug: "zynora",
+    title: "Zynora Studios",
+    client: "Zynora Studios, Lagos",
+    summary:
+      "The website for a Lagos creative studio that does brand identity, creative strategy, campaigns and content production.",
+    contributions: [
+      "Built the site end to end, from the animated hero and services marquee to the contact flow",
+    ],
+    stack: ["Next.js"],
+    image: {
+      src: "/work/zynora-studios.webp",
+      width: 1600,
+      height: 836,
+      alt: "Zynora Studios home page with the headline Where Clarity Meets Craft",
+    },
+    links: [{ label: "Visit site", href: "https://www.zynorastudios.com" }],
   },
   // {
   //   slug: "ttc",

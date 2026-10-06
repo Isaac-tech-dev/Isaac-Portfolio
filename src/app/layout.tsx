@@ -41,8 +41,9 @@ export const viewport: Viewport = {
   ],
 };
 
-// Sets the theme before first paint so there is no flash of the wrong colors.
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t}catch(e){}})()`;
+// Before first paint: set the theme (no flash of wrong colors) and mark JS as available so
+// scroll reveals can start hidden. If the reveal script never runs, show everything after 3s.
+const themeScript = `(function(){var d=document.documentElement;d.classList.add('js');setTimeout(function(){if(d.dataset.revealReady!=='on')d.classList.remove('js')},3000);try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}d.dataset.theme=t}catch(e){}})()`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section id="contact" className="border-t border-rule bg-surface/60">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 sm:py-28 md:grid-cols-2 md:gap-16">
-        <div>
+        <div data-reveal>
           <h2 className="font-display text-4xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-5xl">
             Hiring for a mobile or frontend role?
           </h2>
@@ -22,7 +22,13 @@ export default function Contact() {
           </a>
         </div>
 
-        <form action={profile.formAction} method="POST" className="space-y-5">
+        <form
+          action={profile.formAction}
+          method="POST"
+          data-reveal
+          style={{ "--d": "150ms" } as React.CSSProperties}
+          className="space-y-5"
+        >
           <div>
             <label htmlFor="name" className="text-sm font-medium">
               Name
