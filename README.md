@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Isaac Ayeni — portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal site built with Next.js (App Router), TypeScript and Tailwind CSS v4. Deployed on Vercel.
 
-Currently, two official plugins are available:
+## Develop
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Editing content
+
+All copy lives in `src/data/site.ts`: profile links, featured projects, the "More projects" list, experience, education and skills. Components in `src/components` only handle layout.
+
+To add a featured project, drop a screenshot (about 1600px wide, `.webp`) into `public/work/` and add an entry to `featured` with its width and height.
+
+## Notes
+
+- Fonts (Bricolage Grotesque, Instrument Sans) are self-hosted from `src/app/fonts` under the SIL Open Font License.
+- Light and dark themes follow the visitor's system setting; the header button overrides it and remembers the choice.
+- `STATIC_EXPORT=1 npm run build` writes a plain static site to `out/` if you ever want to host it outside Vercel.
+- The contact form posts to Getform (`profile.formAction`).

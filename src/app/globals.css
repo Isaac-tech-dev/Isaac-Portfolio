@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --paper: #f5f6f8;
+  --surface: #e8ebf0;
+  --ink: #12161e;
+  --muted: #586070;
+  --rule: #d5d9e0;
+  --accent: #f2b300;
+  --on-accent: #12161e;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --paper: #0e131b;
+  --surface: #18202c;
+  --ink: #e8ebf0;
+  --muted: #98a2b2;
+  --rule: #273142;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+  :focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Underlined text link: the accent shows up as the underline. */
+  .text-link {
+    text-decoration-line: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: text-decoration-thickness 150ms ease;
+  }
+  .text-link:hover {
+    text-decoration-thickness: 5px;
+  }
+}
+
+/* The single orchestrated moment: hero lines rise in on load. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.4em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+/* Scroll reveals. Only active once the inline script has added .js, so the page
+   is fully visible without JavaScript. --d sets a per-element stagger delay. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition:
+    opacity 700ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms),
+    transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms);
+}
+.js [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Project screenshots open out from a cropped, zoomed-in frame. */
+.js [data-reveal="media"] {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(8% 6% 8% 6% round 1.5rem);
+  transition: clip-path 1100ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms);
+}
+.js [data-reveal="media"].is-in {
+  clip-path: inset(0 round 1rem);
+}
+.js [data-reveal="media"] .media-zoom {
+  transform: scale(1.08);
+  transition: transform 1400ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.js [data-reveal="media"].is-in .media-zoom {
+  transform: none;
+}
+
+/* Reading-progress bar under the header, driven by scroll position (no JS).
+   Browsers without scroll-driven animations simply don't show it. */
+.scroll-progress {
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 2px;
+  background: var(--accent);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    animation: progress linear both;
+    animation-timeline: scroll(root);
+  }
+}
+@keyframes progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Soft pulse on the availability dot. */
+.pulse {
+  animation: pulse 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  80%,
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise,
+  .pulse {
+    animation: none;
+  }
+  .js [data-reveal],
+  .js [data-reveal="media"],
+  .js [data-reveal="media"] .media-zoom {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    transition: none;
+  }
+}
