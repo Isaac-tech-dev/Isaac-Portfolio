@@ -1,29 +1,42 @@
 import { profile } from "@/data/site";
 
-const lines = ["I build the mobile apps", "people use to bank, train", "and talk to their doctor."];
+// Write the headline as one sentence. It wraps on its own with balanced line
+// lengths, so it reads well at any screen size and any copy length.
+const headline =
+  "I'm a software engineer who ships tested, scalable web and mobile apps from first idea to production.";
+const words = headline.split(" ");
 
 export default function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-6xl px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24">
+    <section
+      id="top"
+      className="mx-auto max-w-6xl px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24"
+    >
       <h1
-        className="font-display text-[clamp(2.6rem,7.6vw,6.75rem)] font-semibold leading-[0.95] tracking-[-0.025em]"
+        className="max-w-[22ch] font-display text-[clamp(2.4rem,6vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.025em] [text-wrap:balance]"
         style={{ fontVariationSettings: '"wdth" 90' }}
       >
-        {lines.map((line, i) => (
-          <span key={line} className="rise md:block" style={{ animationDelay: `${i * 110}ms` }}>
-            {line}{" "}
+        {words.map((word, i) => (
+          <span key={i}>
+            <span className="rise inline-block" style={{ animationDelay: `${i * 35}ms` }}>
+              {word}
+            </span>{" "}
           </span>
         ))}
       </h1>
 
       <div
         className="rise mt-10 grid gap-8 sm:mt-14 md:grid-cols-[minmax(0,34rem)_1fr] md:items-end"
-        style={{ animationDelay: "420ms" }}
+        style={{ animationDelay: "550ms" }}
       >
         <p className="text-lg leading-relaxed text-muted sm:text-xl">
-          I&apos;m {profile.name}, lead mobile developer at Optimus Bank in Lagos. For four
-          years I&apos;ve shipped React Native and React apps for banks, health startups
-          and fitness brands.
+          I&apos;m {profile.name}, a Software Engineer in Lagos who works across
+          the whole stack. For over four years I&apos;ve built and shipped
+          products for banks, health startups and fitness brands, from React
+          Native and React frontends to the backend services and APIs behind
+          them. That includes Optiverse 2.0 by Optimus Bank, a live fintech app
+          on Google Play and the App Store. I handle everything from Figma to
+          production, so what reaches users is fast, polished and dependable.
         </p>
 
         <div className="flex flex-col gap-5 md:items-end">
