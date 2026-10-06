@@ -113,23 +113,6 @@ export const featured: FeaturedProject[] = [
     },
     links: [{ label: "Visit site", href: "https://www.zynorastudios.com" }],
   },
-  // {
-  //   slug: "ttc",
-  //   title: "The Triumphant Community",
-  //   client: "TTC Global",
-  //   year: "2024",
-  //   summary:
-  //     "The church's public website, with service times, locations and the latest sermons.",
-  //   contributions: ["Designed and built the site"],
-  //   stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-  //   image: {
-  //     src: "/work/ttc-website.webp",
-  //     width: 1600,
-  //     height: 888,
-  //     alt: "The Triumphant Community website home page",
-  //   },
-  //   links: [{ label: "Visit site", href: "https://www.ttcglobal.org" }],
-  // },
 ];
 
 export type OtherProject = {
